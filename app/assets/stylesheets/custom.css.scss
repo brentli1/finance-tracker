@@ -18,7 +18,12 @@
   padding-top: 15px;
 }
 
-.nav-navbar-right li {
+.navbar-responsive-collapse {
+  margin-right: 0;
+  width: 100%;
+}
+
+.navbar-right li {
   .btn {
     color: #FFF;
     margin-top: 5%;
@@ -27,6 +32,19 @@
   .btn-danger {
     &:hover {
       background-color: darken(#D9534F, 20);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .user-name {
+    text-align: left;
+  }
+
+  .navbar-right {
+    .btn {
+      margin-bottom: 0;
+      max-width: 200px;
     }
   }
 }
