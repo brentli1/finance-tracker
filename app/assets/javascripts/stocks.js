@@ -5,6 +5,7 @@ var init_stock_lookup = function() {
 
   $('#stock-lookup-form').on('ajax:success', function(evt, data, status) {
     hide_spinner();
+    console.log($('#stock-lookup'));
     $('#stock-lookup').replaceWith(data);
     init_stock_lookup();
   });

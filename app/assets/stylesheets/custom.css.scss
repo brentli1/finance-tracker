@@ -1,3 +1,26 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  > .row {
+    flex: 1;
+  }
+
+  @media(max-width:767px) {
+    width: 100%;
+  }
+}
+
 .results-block {
   display: inline-block;
 }
@@ -10,41 +33,30 @@
   padding-left: 25px;
 }
 
-.logout {
-  padding-left: 0;
-}
-
-.user-name {
-  padding-top: 15px;
-}
-
 .navbar-responsive-collapse {
   margin-right: 0;
   width: 100%;
 }
 
-.navbar-right li {
-  .btn {
-    color: #FFF;
-    margin-top: 5%;
-  }
-
-  .btn-danger {
-    &:hover {
-      background-color: darken(#D9534F, 20);
+#stock-lookup-form,
+#friend-lookup-form {
+  .btn-success {
+    @media(max-width: 991px) {
+      margin-top: 10px;
+      width: 100%;
     }
   }
 }
 
-@media (max-width: 768px) {
-  .user-name {
-    text-align: left;
-  }
+a:visited.btn {
+  color: #FFF !important;
+}
 
-  .navbar-right {
-    .btn {
-      margin-bottom: 0;
-      max-width: 200px;
-    }
+.results-block {
+  width: 100%;
+
+  a.btn,
+  span.label {
+    float: right;
   }
 }

@@ -5,8 +5,8 @@ class StocksController < ApplicationController
       @stock ||= Stock.new_from_lookup(params[:stock])
     end
 
-    if @stock
-      render partial: 'lookup'
+    if @stock.present?
+      render partial: 'stocks/lookup'
     else
       render status: :not_found, nothing: true
     end
